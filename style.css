@@ -1,0 +1,287 @@
+*{
+	scroll-behavior: smooth;
+}
+h2, h3{
+	margin: 0 0 30px 0;
+	font-size: 45px;
+	font-family: 'Oswald', sans-serif;
+	color: rgb(43, 31, 18);
+}
+p{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 30px;
+	font-family: 'Podkova', serif;
+	letter-spacing: -1px;
+	color: rgb(43, 31, 18);
+	text-align: justify;
+}
+body{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+header{
+	position: fixed;
+	height: 15vh;
+	top: 0;
+	left: 0;
+	width: 70vw;
+	padding: 0 15vw;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: white;
+	border-bottom: solid 4px rgb(43, 31, 18);
+	z-index: 1000;
+}
+header .logo{
+	font-family: 'Fjalla One', sans-serif;
+	color: rgb(43, 31, 18);
+	margin: 0;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 70px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+header .logo img{
+	display: inline-block;
+	margin: auto;
+	height: 62px;
+}
+header ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li{
+	list-style: none;
+	margin-left: 1.5vw;
+	position: relative;
+}
+header ul li a{
+	position: absolute;
+	font-size: 20px;
+	font-family: 'Oswald', sans-serif;
+	text-decoration: none;
+	padding: 7.5px 15px;
+	color: rgb(43, 31, 18);
+}
+.shape {
+	fill: transparent;
+	stroke-width: 1px;
+	stroke: rgb(43, 31, 18);
+	stroke-dasharray: 0 600;
+	stroke-dashoffset: -140;
+}
+@keyframes draw {
+	0% {
+	  stroke-dasharray: 0 600;
+	  stroke-dashoffset: -474;
+	  stroke-width: 1px;
+	}
+	70%{
+		stroke-width: 2px;
+	}
+	100% {
+	  stroke-dasharray: 600;
+	  stroke-dashoffset: 0;
+	  stroke-width: 6px;
+	}
+} 
+header ul li:hover .shape{
+	animation: 0.4s draw linear forwards;
+}
+header ul li a.active{
+	color: white;
+	background: rgb(43, 31, 18);
+}
+
+/* Section 1 */
+
+.sect1{
+	width: 70vw;
+	height: 1000px;
+	margin: 5vh auto 0 auto;
+	display: flex;
+	justify-content: space-around;
+}
+.sect1 .coffee_beans{
+	position: relative;
+	width: 50%;
+	height: 100%;
+}
+.sect1 .coffee_beans img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.sect1 .main_text{
+	width: 50%;
+	height: 80vh;
+	margin: 10vh auto 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Sections general */
+
+.dop_sect{
+	width: 100vw;
+	height: 19vh;
+}
+.sect2, .sect3, .sect4, .sect5{
+	width: 70vw;
+	height: 550px;
+	margin: 0 auto 100px auto;
+	display: flex;
+	justify-content: space-around;
+}
+.sect5{
+	margin-bottom: 150px;
+}
+.sect2 .text_2, .sect3 .text_3, .sect4 .text_4, .sect5 .text_5{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	animation: vhod 0.6s linear;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+}
+.sect4 .text_4 ul, .sect5 .text_5 ul{
+	margin-top: 0;
+}
+.sect4 .text_4 ul li, .sect5 .text_5 ul li{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 25px;
+	font-family: 'Podkova', serif;
+	letter-spacing: -1px;
+	color: rgb(43, 31, 18);
+	text-align: justify;
+}
+
+/*Section 2*/
+
+.sect2 .coffee_pomol{
+	position: relative;
+	width: 50%;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+.sect2 .coffee_pomol img#krishka{
+	position: absolute;
+	top: -200%;
+	height: 3.5%;
+	z-index: 5;
+}
+.sect2 .coffee_pomol img#machine{
+	position: absolute;
+	top: 3.5%;
+	height: 96%;
+	z-index: 2;
+}
+.sect2 .coffee_pomol #holderwithc{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+.sect2 .coffee_pomol #holderwithc img#holder{
+	position: absolute;
+	height: 16%;
+	top: 77%;
+	left: 42.5%;
+}
+.sect2 .coffee_pomol #holderwithc img#coffee{
+	position: absolute;
+	height: 5%;
+	top: 72%;
+	left: 44%;
+}
+
+/*Section 3*/
+
+.sect3 .temperovka{
+	position: relative;
+	width: 50%;
+}
+.sect3 .temperovka img#temper{
+	position: absolute;
+	width: 28.5%;
+	top: -120%;
+	left: 5%;
+	z-index: 12;
+}
+
+
+/*Section 4*/
+
+.sect4 .gotovim{
+	position: relative;
+	width: 50%;
+	height: 100%;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+	align-items: center;
+}
+.sect4 .gotovim img#coffeemachine{
+	position: absolute;
+	width: 65%;
+	z-index: 8;
+}
+.sect4 .gotovim img#cup{
+	position: absolute;
+	width: 25%;
+	top: 52%;
+	left: 38%;
+	z-index: 9;
+}
+.sect4 .gotovim img#cupfull{
+	position: absolute;
+	width: 25%;
+	top: 52%;
+	left: 38%;
+	z-index: 9;
+}
+
+/*Section 5*/
+.sect5 .coffee_cup{
+	position: relative;
+	width: 50%;
+}
+
+
+
+@keyframes vhod{
+	0%{
+		opacity: 0;
+		margin-top: 15vh;
+	}
+	100%{
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+@media (max-width: 1650px){
+	p{
+		font-size: 27px;
+	}
+}
+@media (max-height: 780px){
+	.sect2{
+		height: 550px;
+	}
+	.sect3{
+		height: 550px;
+	}
+}
